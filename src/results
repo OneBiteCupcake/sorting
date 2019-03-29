@@ -1,0 +1,13 @@
+Array length: 100
+InsertionSort took: 100.3 μs
+MergeSort took: 147.2 μs
+QuickSort took: 57.21 μs
+SelectionSort took: 147.1 μs
+Java default sort took: 226.9 μs
+
+Array length: 1000000
+InsertionSort took: 2.431 min
+MergeSort took: 247.0 ms
+QuickSort took: 134.0 ms
+SelectionSort took: 16.32 min
+Java default sort took: 7.678 ms
