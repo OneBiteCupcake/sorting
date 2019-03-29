@@ -1,5 +1,4 @@
 import com.google.common.base.Stopwatch;
-import com.sun.xml.internal.bind.v2.model.annotation.Quick;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -20,8 +19,10 @@ public class MainSort {
         int[] smallArrayToSort = readFile("smallArray.txt");
         sort(smallArrayToSort);
 
-        //int[] mediumArrayToSort = readFile("mediumArray.txt");
-        //sort(mediumArrayToSort);
+        System.out.println();
+
+        int[] mediumArrayToSort = readFile("mediumArray.txt");
+        sort(mediumArrayToSort);
 
         //int[] largeArrayToSort = readFile("largeArray.txt");
         //sort(largeArrayToSort);
@@ -36,19 +37,19 @@ public class MainSort {
         Stopwatch timer = Stopwatch.createStarted();
         is.sort(arrayToSort);
         System.out.println("InsertionSort took: " + timer.stop());
-        arrayToSort = copyOfOriginal;
+        arrayToSort = copyOfOriginal.clone();
 
         MergeSort ms = new MergeSort();
         timer = Stopwatch.createStarted();
         ms.sort(arrayToSort, 0, arrayToSort.length - 1);
         System.out.println("MergeSort took: " + timer.stop());
-        arrayToSort = copyOfOriginal;
+        arrayToSort = copyOfOriginal.clone();
 
         QuickSort qs = new QuickSort();
         timer = Stopwatch.createStarted();
         qs.sort(arrayToSort, 0, arrayToSort.length - 1);
         System.out.println("QuickSort took: " + timer.stop());
-        arrayToSort = copyOfOriginal;
+        arrayToSort = copyOfOriginal.clone();
 
         SelectionSort ss = new SelectionSort();
         timer = Stopwatch.createStarted();
